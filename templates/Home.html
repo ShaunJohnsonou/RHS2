@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% if user.isauthenticated %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Something</title>
+</head>
+<body>
+
+    <center>
+        <h1>Table test</h1>
+        <table border = '1'>
+
+            <tr>
+                <th>Id</th>
+                <th>Project name</th>
+                <th>Reporting Period</th>
+                <th>Type</th>
+                <th>Type description</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Logged By</th>
+                <th>Responsible</th>
+                <th>Start Date</th>
+                <th>Target date</th>
+                <th>Feedback</th>
+
+            </tr>
+
+            {% for one_list in data %}
+            <tr>
+                {% for cell in one_list %}
+                    <td>{{cell}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+
+</body>
+{% endblock %}
+
+{% else %}
+<p>You are not logged in</p>
+<a href="{http://127.0.0.1:8000/accounts/login/}">Log In</a>
+{% endif %}
+
+</html>

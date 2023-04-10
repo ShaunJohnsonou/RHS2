@@ -1,0 +1,41 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up page</title>
+</head>
+<body>
+<img src="{% static '/images/RHS_logo.png' %}" alt="RHSLogo">
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label for=''> Username </label>
+    <input type='text' id="username" name="username" placeholder="Username" Required>
+    <br>
+    <label for=''> First Name </label>
+    <input type='text' id="fname" name="fname" placeholder="Enter your first name" Required>
+    <br>
+    <label for=''> Last Name </label>
+    <input type='text' id="lname" name="lname" placeholder="Enter your last name" Required>
+    <br>
+    <label for=''> Enter your email </label>
+    <input type='email' id="email" name="email" placeholder="Enter your email" Required>
+    <br>
+    <label for=''> Password </label>
+    <input type='password' id="password1" name="password1" placeholder="Create your Password" Required>
+    <br>
+    <label for=''> Confirm your Password </label>
+    <input type='password' id="password2" name="password2" placeholder="Confirm your Password" Required>
+    <br>
+    <button type="submit">Sign up</button>
+
+</form>
+
+</body>
+</html>

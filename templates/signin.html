@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% load static %}
+
+<!<!DOCTYPE html>
+<!<html lang="en">
+<!<head>
+ <!   <meta charset="UTF-8">
+ <!   <title>Sign in page</title>
+<!</head>
+<!<body>
+
+<!<img src="{% static '/images/RHS_logo.png' %}" alt="RHSLogo">
+
+
+<!<form action="" method="post">
+  <!  {% csrf_token %}
+  <!  <label for=''> Username </label>
+  <!  <input type='text' id="username" name="username" placeholder="Enter your Username" Required>
+  <!  <br>
+   <! <label for=''> Password </label>
+   <! <input type='text' id="password" name="password" placeholder="Enter your Password" Required>
+   <! <br>
+   <! <button type="submit">Sign In</button>
+
+<!</form>
+
+<!</body>
+<!</html>
+
